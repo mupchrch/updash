@@ -1,0 +1,59 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  //Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
+  Dashing.widget_base_dimensions = [370, 346]
+  Dashing.numColumns = 5
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=<%= 'AIzaSyATKCHlqaU7di5pXjft-S2hWWl0rB-MbAU' %>"></script>
+<style>
+  body { /*overflow: hidden;*/ }
+</style>
+
+<% content_for :title do %>updash<% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock"></div>
+      <!--i class="fa fa-clock-o icon-background"></i-->
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+        <div data-id="weather" data-view="Weather"></div>
+    </li>
+
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div style="background-color: #47bbb3;" data-id="nowplaying" data-view="Text" data-title="Now Playing" data-text="Artist - Track"></div>
+    </li>
+
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="albumart" data-view="ExternalImage" data-title="Album Name" data-width="370px" data-height="346px"></div>
+    </li>
+
+    <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="circle-ci-mupchrch-upchat-master" data-view="CircleCi" data-title="upchat"></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="2">
+        <div data-id="google_calendar" data-view="GoogleCalendar"></div>
+    </li>
+
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="atompkg" data-view="Number"></div>
+    </li>
+
+    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="insta_photos" data-view="InstaPhotos" data-width="370px" data-height="346px"></div>
+    </li>
+
+    <li data-row="2" data-col="4" data-sizex="2" data-sizey="2">
+      <div data-id="trafficmap" data-view="Trafficmap" data-lat="42.9956" data-long="-71.2" data-zoom="10" style="height: 702px;width: 750px;"></div>
+    </li>
+
+    <li data-row="3" data-col="2" data-sizex="2" data-sizey="1">
+      <div class="large" data-id="commute" data-view="Text" data-title="Commute Time"></div>
+    </li>
+  </ul>
+</div>
