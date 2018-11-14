@@ -1,15 +1,10 @@
 <script type='text/javascript'>
 $(function() {
-  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
-  //Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
   Dashing.widget_base_dimensions = [370, 346]
   Dashing.numColumns = 5
 });
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=<%= 'AIzaSyATKCHlqaU7di5pXjft-S2hWWl0rB-MbAU' %>"></script>
-<style>
-  body { /*overflow: hidden;*/ }
-</style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=<%= ENV['GOOGLE_MAPS_TOKEN'] %>"></script>
 
 <% content_for :title do %>updash<% end %>
 
