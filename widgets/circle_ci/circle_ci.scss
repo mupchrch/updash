@@ -13,14 +13,6 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   background-color: $background-color;
   vertical-align: top;
 
-  img.background {
-    width: 100% !important;
-    position: absolute;
-    left: 0;
-    top: 30px;
-    opacity: 0.05;
-  }
-
   .commit-info {
     margin: 10px 0px;
     padding: 5px;

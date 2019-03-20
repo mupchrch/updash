@@ -55,7 +55,7 @@ def build_data(project, auth_token)
     widget_class: "#{translate_status_to_class(latest_build['status'])}",
     committer_name: latest_build['committer_name'],
     commit_body: "\"#{latest_build['subject']}\"",
-    avatar_url: latest_build['user']['avatar_url']
+    avatar_url: "https://github.com/" + latest_build['username'] + ".png"
   }
   return data
 end
